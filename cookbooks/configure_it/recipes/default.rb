@@ -11,4 +11,7 @@ group 'admin' do
 	 action :create
 end
 
+file '/etc/nginx/nginx.conf' do
+  notifies :restart, 'service[nginx]', :delayed
+end
 
