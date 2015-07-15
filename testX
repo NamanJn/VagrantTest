@@ -1,1 +1,3 @@
 touch does_this_work 
+wget http://localhost:80
+
