@@ -1,18 +1,14 @@
 
 package 'nginx'
 package 'python-flask'
-
+package 'vim'
 
 service "nginx" do
 	  action :start
 end
 
-
-file '/home/vagrant/motd' do
-	content 'hello world'
-end
-
-
-group 'hola' do
+group 'admin' do
 	 action :create
 end
+
+
