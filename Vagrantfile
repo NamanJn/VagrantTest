@@ -16,8 +16,8 @@ Vagrant.configure(2) do |config|
 
   # doing standard apt-get update and upgrade
    config.vm.provision "shell", inline: <<-SHELL
-     sudo apt-get update
-     sudo apt-get upgrade 
+     sudo apt-get update -y
+     sudo apt-get upgrade  -y
    SHELL
    
   # copying over my flask app	 
@@ -40,4 +40,9 @@ Vagrant.configure(2) do |config|
   config.vm.provision "file",
   	source: ".inputrc",
   	destination: ".inputrc"
+
+
+  config.vm.provision "file",
+  	source: "vimrc",
+  	destination: ".vimrc"
 end
