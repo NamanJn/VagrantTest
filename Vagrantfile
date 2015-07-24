@@ -14,11 +14,6 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
   config.vm.network "forwarded_port", guest: 5000, host: 5050 
 
-  # doing standard apt-get update and upgrade
-   config.vm.provision "shell", inline: <<-SHELL
-     sudo apt-get update -y
-     sudo apt-get upgrade  -y
-   SHELL
    
   # copying over my flask app	 
   config.vm.provision "file",
