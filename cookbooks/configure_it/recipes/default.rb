@@ -1,5 +1,4 @@
 
-
 execute "update_and_upgrade" do
 	command "apt-get update -y"
 	command "apt-get upgrade -y"
@@ -22,3 +21,16 @@ file '/etc/nginx/nginx.conf' do
 end
 
 
+sudo 'vagrant' do
+	user 'vagrant'
+	runas 'ALL'
+	commands ['ALL']
+	nopasswd true
+end
+
+sudo 'admin' do
+	group '%admin'
+	runas 'ALL'
+	commands ['ALL']
+	nopasswd false 
+end

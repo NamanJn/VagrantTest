@@ -1,4 +1,4 @@
-<h3> Steps </h3>
+<h3> Steps (clone recursively)</h3>
 1. <code>vagrant up</code>
 2. <code>vagrant ssh</code>
 3. <code>python flask_app.py</code> 

@@ -24,10 +24,10 @@ Vagrant.configure(2) do |config|
   # Chef is automatically installed by Vagrant.
   config.vm.provision "chef_solo" do |chef|
   	chef.add_recipe "configure_it"
+  	#chef.add_recipe "sudo"
   end
   
-  # This contains checks for admin and vagrant
-  # privileges.
+  # This contains a check for the nginx port.
   config.vm.provision "shell",
   	path: "shell_provisioner.sh"
 
