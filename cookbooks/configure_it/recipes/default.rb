@@ -1,7 +1,4 @@
 
-include_recipe 'sudo'
-
-
 execute "update_and_upgrade" do
 	command "apt-get update -y"
 	command "apt-get upgrade -y"
